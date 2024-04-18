@@ -1,0 +1,35 @@
+@media (max-width: 960px) {
+  .clients__action {
+    width: 105px;
+  }
+
+  .clients__btn-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .clients__data-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 760px) {
+  .clients__table {
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 768px) {
+
+
+    .modal__content {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+  }
+
+@media (min-width: 576px) {
+    .modal__dialog {
+        max-width: 500px;
+        margin: 30px auto;
+    }
+  }

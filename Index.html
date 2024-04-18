@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список клиентов</title>
+  <link rel="stylesheet" href="frontend/css/normalize.css">
+  <link rel="stylesheet" href="frontend/css/style.css">
+  <script defer src="frontend/js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <a href="#" class="header__logo-link">
+        <img src="frontend/img/logo.svg" alt="Логотип">
+      </a>
+      <form class="header__form">
+        <input type="text" class="header__form-input" placeholder="Введите запрос">
+      </form>
+    </div>
+  </header>
+  <main class="main">
+    <section class="clients">
+      <div class="clients__container container">
+        <h1 class="clients__title title-h1">Клиенты</h1>
+        <table class="clients__table">
+          <thead class="clients__table-head">
+            <td class="clients__table-head-td clients__id"><span class="clients__id-span">ID</span></td>
+            <td class="clients__table-head-td clients__name">Фамилия Имя Отчество <span class="clients__name-span">А-Я</span></td>
+            <td class="clients__table-head-td"><span class="clients__data-span">Дата и время создания&nbsp;</span></td>
+            <td class="clients__table-head-td"><span class="clients__data-span">Последние изменения&nbsp;</span></td>
+            <td class="clients__table-head-td"><span>Контакты</span></td>
+            <td class="clients__table-head-td"><span>Действия</span></td>
+          </thead>
+          <tbody class="clients__table-body" id="clients-table">
+            <tr class="clients__table-body-tr">
+              <td class="clients__table-body-td"><span class="clients__id-body">123455</span></td>
+              <td class="clients__table-body-td">Куприянов Арсений Валерьевич</td>
+              <td class="clients__table-body-td"><div>21.02.2021&nbsp;&nbsp;<span class="clients__data-body">12:41</span></div></td>
+              <td class="clients__table-body-td"><div>21.02.2021&nbsp;&nbsp;<span class="clients__data-body">14:50</span></div></td>
+              <td class="clients__table-body-td">
+                <ul class="clients__contact-list">
+                  <li class="clients__contact-item"><a href="#" class="clients__tooltip navy-tooltip"><img src="/frontend/img/vk.svg" alt=""><span class="clients__contact-item-span">+7(911) 262-65-77</span></a></li>
+                  <li class="clients__contact-item"><img src="/frontend/img/fb.svg" alt=""></li>
+                  <li class="clients__contact-item"><img src="/frontend/img/phone.svg" alt=""></li>
+                  <li class="clients__contact-item"><img src="/frontend/img/client.svg" alt=""></li>
+                  <li class="clients__contact-item"><img src="/frontend/img/mail.svg" alt=""></li>
+                </ul>
+              </td>
+              <td class="clients__table-body-td"><div>Изменить Удалить</div></td>
+            </tr>
+            <tr class="clients__table-body-tr">
+              <td class="clients__table-body-td"><span class="clients__id-body">123455</span></td>
+              <td class="clients__table-body-td">Куприянов Арсений Валерьевич</td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">12:41</span></td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">14:50</span></td>
+              <td class="clients__table-body-td"></td>
+              <td class="clients__table-body-td">Изменить Удалить</td>
+            </tr>
+            <tr class="clients__table-body-tr">
+              <td class="clients__table-body-td"><span class="clients__id-body">123455</span></td>
+              <td class="clients__table-body-td">Дмитриевский Олег Алексеевич</td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">12:41</span></td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">14:50</span></td>
+              <td class="clients__table-body-td"></td>
+              <td class="clients__table-body-td">Изменить Удалить</td>
+            </tr>
+            <tr class="clients__table-body-tr">
+              <td class="clients__table-body-td"><span class="clients__id-body">123455</span></td>
+              <td class="clients__table-body-td">Куприянов Арсений Валерьевич</td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">12:41</span></td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">14:50</span></td>
+              <td class="clients__table-body-td"></td>
+              <td class="clients__table-body-td">Изменить Удалить</td>
+            </tr>
+            <tr class="clients__table-body-tr">
+              <td class="clients__table-body-td"><span class="clients__id-body">123455</span></td>
+              <td class="clients__table-body-td">Куприянов Арсений Валерьевич</td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">12:41</span></td>
+              <td class="clients__table-body-td">21.02.2021&nbsp;&nbsp;<span class="clients__data-body">14:50</span></td>
+              <td class="clients__table-body-td"></td>
+              <td class="clients__table-body-td">Изменить Удалить</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="clients__add-wrapper">
+          <a class="clients__add-btn" href="#openModal">&nbsp;&nbsp;Добавить клиента</a>
+        </div>
+      </div>
+    </section>
+    <section id="openModal" class="modal">
+        <!-- <div class="modal__dialog">
+          <div class="modal__content">
+            <div class="modal__header">
+              <h2 class="modal__title title-h2">Новый клиент</h2>
+              <a href="#close" title="Close" class="modal__close"><img class="modal__close-img" src="/frontend/img/cros.svg" alt=""></a>
+            </div>
+            <form class="modal__form" id="new-client">
+              <div class="modal__body" id="fio">
+                  <input id="surname" type="text" class="modal__form-input" name="surname" placeholder="Фамилия*" required>
+                  <input id="name" type="text" class="modal__form-input" name="name" placeholder="Имя*" required>
+                  <input id="lastname" type="text" class="modal__form-input" name="lastname" placeholder="Отчество">
+              </div>
+              <div class="modal__new-client" id="new-contact">
+                <span class="modal__new-client-span" id="new-contact-button">Добавить контакт</span>
+              </div>
+              <div class="modal__btn-wrapper">
+                <button class="modal__btn btn btn-reset" id="new-contact-add">
+                  Сохранить
+                </button>
+                <a class="modal__cancel" href="#cancel">Отмена</a>
+              </div>
+            </form>
+          </div>
+        </div> -->
+    </section>
+  </main>
+</body>
+</html>

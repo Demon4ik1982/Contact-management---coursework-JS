@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список клиентов</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/media.css">
+  <script defer src="/js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <a href="#" class="header__logo-link">
+        <img src="/img/logo.svg" alt="Логотип">
+      </a>
+      <form class="header__form">
+        <input type="text" id="form-input" class="header__form-input" placeholder="Введите запрос">
+      </form>
+    </div>
+  </header>
+  <main class="main">
+    <section class="clients">
+      <div class="clients__container container">
+        <h1 class="clients__title title-h1">Клиенты</h1>
+        <table class="clients__table">
+          <thead class="clients__table-head">
+            <td id="clients__id" class="clients__table-head-td clients__id"><span class="clients__id-span">ID</span></td>
+            <td id="clients__name" class="clients__table-head-td clients__name">Фамилия Имя Отчество <span class="clients__name-span">А-Я</span></td>
+            <td id="clients__data" class="clients__table-head-td clients__data"><span class="clients__data-span">Дата&nbsp;и&nbsp;время<br>создания&nbsp;</span></td>
+            <td id="clients__data-edit" class="clients__table-head-td clients__data-edit"><span class="clients__data-span">Последние<br>изменения&nbsp;</span></td>
+            <td class="clients__table-head-td"><span>Контакты</span></td>
+            <td class="clients__table-head-td clients__action"><span>Действия</span></td>
+          </thead>
+          <tbody class="clients__table-body" id="clients-table">
+
+          </tbody>
+        </table>
+        <div class="clients__add-wrapper">
+          <a class="clients__add-btn" href="#openModal">&nbsp;&nbsp;Добавить клиента</a>
+        </div>
+      </div>
+    </section>
+    <section id="openModal" class="modal">
+    </section>
+    <section id="openModalAlert" class="modal__alert">
+    </section>
+  </main>
+</body>
+</html>
